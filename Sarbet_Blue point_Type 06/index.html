@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sarbet(Blue Point)_Type 06</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, viewport-fit=cover"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="mobile-web-app-capable" content="yes"/>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="IE=edge"/>
+    <meta name="keywords" content=" "/>
+    <meta name="description" content=""/>
+    
+    <meta property="og:title" content="Sarbet_Blue_Point_Type_06">
+    <meta property="og:description" content="153m² including common area.">
+    <meta property="og:image" content="temerimg.jpg">
+    <meta property="og:url" content="https://sarbet-blue-point-type-06.vercel.app">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link href="assets/layui/css/layui.css" rel="stylesheet">
+    <link href="assets/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/glightbox/glightbox.min.css" rel="stylesheet">
+    <link href="assets/kp_visit.css" rel="stylesheet">
+    <script src="assets/jquery.min.js"></script>
+</head>
+<body>
+
+<script src="tour.js"></script>
+<audio id="autoHotspotAudio" style="display: none;"></audio>
+<div id="panoCompare" style="width:100%;height:100%;display: none;"></div>
+<div id="pano" style="width:100%;height:100%;">
+        <noscript>
+        <table style="width:100%;height:100%;">
+            <tr style="vertical-align:middle;">
+                <td>
+                    <div style="text-align:center;">Loading error:<br/><br/>Javascript cannot run, please check whether this setting is turned on in your browser<br/><br/></div>
+                </td>
+            </tr>
+        </table>
+    </noscript>
+    <script>
+        var krpano = null;
+        var krpanoCompare = null;
+        var VRURL = "https://www.keypano.com/";
+        var VRSTATIC = "https://res.keypano.com/";
+        var VRIMGURL = "https://img.keypano.com/";
+        var VRXMLURL = "https://xml.keypano.com/";
+        var visitPwdOpen = 1;
+        var groupMode = 0;
+        var visitId = "01712w65w3ik_6";
+        var lastTime = "";
+        var VRVISITURL = "https://www.keypano.com/v/01712w65w3ik_6-1763621163.html";
+        var visitVersion = "202511201452";
+        var groupModeFirstId = "0";
+        var isFirstSceneCompareMode = "0";
+        var panoSceneNums = "11";
+        var panoFirstCompareInfo = {
+            id: "229998"
+        };
+        /**场景列表**/
+        var visitItemSceneList = [{"groupname":"Default","groupid":0,"list":[{"id":229998,"name":"Living Room","groupid":0,"compare_sceneid":0,"compare_position":null,"compare_screen":null,"thumb":"panos\/11_1354599595092.tiles\/thumb.jpg"},{"id":229999,"name":"Corrdor 1","groupid":0,"compare_sceneid":0,"compare_position":null,"compare_screen":null,"thumb":"panos\/11_1354236014696.tiles\/thumb.jpg"},{"id":230000,"name":"Bedroom 1","groupid":0,"compare_sceneid":0,"compare_position":null,"compare_screen":null,"thumb":"panos\/11_1353595561023.tiles\/thumb.jpg"},{"id":230001,"name":"Bedroom 2","groupid":0,"compare_sceneid":0,"compare_position":null,"compare_screen":null,"thumb":"panos\/11_1353236254796.tiles\/thumb.jpg"},{"id":230002,"name":"Master Bedroom","groupid":0,"compare_sceneid":0,"compare_position":null,"compare_screen":null,"thumb":"panos\/11_1359412879282.tiles\/thumb.jpg"},{"id":230003,"name":"M.Bath gate in","groupid":0,"compare_sceneid":0,"compare_position":null,"compare_screen":null,"thumb":"panos\/11_1359189248231.tiles\/thumb.jpg"},{"id":230004,"name":"Master Bathroom","groupid":0,"compare_sceneid":0,"compare_position":null,"compare_screen":null,"thumb":"panos\/11_1356547587279.tiles\/thumb.jpg"},{"id":230005,"name":"Corridor 2","groupid":0,"compare_sceneid":0,"compare_position":null,"compare_screen":null,"thumb":"panos\/11_1353313914274.tiles\/thumb.jpg"},{"id":230006,"name":"Common Bathroom","groupid":0,"compare_sceneid":0,"compare_position":null,"compare_screen":null,"thumb":"panos\/11_1355301281765.tiles\/thumb.jpg"},{"id":230007,"name":"Kitchen","groupid":0,"compare_sceneid":0,"compare_position":null,"compare_screen":null,"thumb":"panos\/11_1353597916942.tiles\/thumb.jpg"},{"id":230008,"name":"Maids Room","groupid":0,"compare_sceneid":0,"compare_position":null,"compare_screen":null,"thumb":"panos\/11_1352463778754.tiles\/thumb.jpg"}]}];
+        var scene2group = {"229998":0,"229999":0,"230000":0,"230001":0,"230002":0,"230003":0,"230004":0,"230005":0,"230006":0,"230007":0,"230008":0};
+        var hotspotlistpics = [];
+        var hotspotlistvideo = [];
+        var hotspotlistShop = [];
+        var hotspotlistImg2Text = [];
+        var visitXml = "tour.xml";
+        var clickSceneThumbTmp = [];
+        var specialJson = [];
+        var sceneListShow = 2;
+        var startScene = 0;
+        var switcheffect = 0;
+        var mapNewObj = [];
+        var effectShow = 1;
+        var beautify_show = 0;
+        embedpano({xml: visitXml, target: "pano", sameorigin: false, onready: function (k) {krpano = k;}});    </script>
+</div>
+
+<div class="itemPreviewContainer">
+        <div class="itemPreview">
+            <div class="itemSwiper">
+                <div class="swiper-wrapper"></div>
+            </div>
+        </div>
+    </div>
+<script type="text/html" id="itemSlideTpl">
+    {{each list item index }}
+    <div class="swiper-slide swiper-slide{{item.id}}" data-id="{{item.id}}" data-compare="{{item.compare_sceneid}}" data-position="{{item.compare_position}}" data-screen="{{item.compare_screen}}">
+        <div class="swiper-box" style='background-image: url("{{item.thumb}}");'>
+            <img src="skin/img/readthumb.png" style="display: none">
+            <div><span>{{item.name}}</span></div>
+        </div>
+    </div>
+    {{/each}}
+</script>
+
+<!--分组 start-->
+<!--分组 end-->
+
+<div class="iconLeftTop">
+    <div class="top">
+                <div class="right">
+                        <div class="viewnum" style="display: none">0views</div>        </div>
+    </div>
+    <div class="bottom">
+            <img src="https://img.keypano.com/water/202511/11_1419391791771.png">
+        </div></div>
+
+<div class="iconBottomLeft">
+        <div class="scene"><img src="skin/img/scene.png"><span>Scene</span></div>    </div>
+<div class="iconBottomRight">
+        </div>
+
+<div class="infosContainer" style="display: none">
+    </div>
+
+
+<div class="iconRight">
+    <div class="fullscreen" onclick="jsfullScreen();"><img src="skin/img/fullscreen.png"></div>
+        <div class="vr" onclick="krpano.call('webvr.enterVR();');"><img src="skin/img/vr.png"></div>
+        <div class="gyro" onclick="switchGyro(this)" style="opacity:0.5;display: none"><img src="skin/img/gyro.png"></div>    <div class="clearScreen"><img src="skin/img/clear.png"></div>    <div class="viewswitching"><img src="skin/img/view.png"></div>    <div class="openCompare"><img src="skin/img/compare.png"></div>
+</div>
+
+<div class="viewswitchingContainer" style="display: none">
+    <div class="active">
+        <img src="skin/img/normal.png">
+        <p>Normal</p>
+    </div>
+    <div>
+        <img src="skin/img/littleplanet.png">
+        <p>Little Planet</p>
+    </div>
+    <div>
+        <img src="skin/img/fisheye.png">
+        <p>Fisheye</p>
+    </div>
+</div>
+
+<div class="marqueeTop" style="display: none">
+        <div class="marqueeContent">
+            All Visuals are for Illustrative purpose only. Final results may differ.        </div>
+    </div>
+<div class="hotspotlistpics" style="display: none"></div>
+<script type="text/html" id="glightBoxPicTpl">
+    {{each list item index}}
+    <a href="{{ item }}" class="glightboxpic" data-zoomable="true">
+        <img src="{{ item }}" alt="image"/>
+    </a>
+    {{/each}}
+</script>
+
+<div class="hotspotlistvideo" style="display: none"></div>
+<script type="text/html" id="glightBoxVideoTpl">
+    {{each list item index}}
+    <a href="{{ item }}" class="glightboxvideo">
+        <img src="{{ item }}" alt="image"/>
+    </a>
+    {{/each}}
+</script>
+
+<div class="gestureTips"><div></div></div>
+<div class="exitCompare"><div>Exit comparison</div></div>
+
+<script type="text/html" id="edit-item-info-hotspot-shop-container-tpl">
+    <div class="shop-container p-4">
+        {{each list item index }}
+        <div class="left"><img src="{{item.thumb}}"></div>
+        <div class="right">
+            <div class="title">{{item.name}}</div>
+            <div class="mt-2 text-800 intro">{{item.intro}}</div>
+            <div class="right-bottom {{item.clas}}">
+                <div class="my-2">
+                    <label class="fs-2 text-danger">$</label>
+                    <span class="fs-1 text-danger">{{item.price}}</span>
+                    <span class="ms-2">{{item.unit}}</span>
+                </div>
+                {{ if(item.link !='') }}<a href="{{item.link}}" target="_blank" class="gopay bg-danger">Buy</a>{{/if}}
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</script>
+
+<script src="assets/swiper/swiper-bundle.min.js"></script>
+<script src="assets/jquery.liMarquee.js"></script>
+<script src="assets/qrcode.min.js"></script>
+<script src="assets/clipboard.min.js"></script>
+<script src="assets/template-web.js"></script>
+<script src="assets/glightbox/glightbox.min.js"></script>
+<script src="assets/layui/layui.js"></script>
+<script src="assets/kp_visit.js"></script>
+</body>
+</html>
